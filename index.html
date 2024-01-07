@@ -4,7 +4,28 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- Your HTML here -->
+        <div id="banner">
+            <div id="logo">
+                <div id="logo-img">
+                    <img src="assets/parrot.png" alt="Parrot" />
+                </div>
+                <div id="logo-text">
+                    <h1>Polyglot</h1>
+                    <p>Translation powered by AI!</p>
+                </div>
+            </div>
+        </div>
+        <div id="body">
+            <h2>Text to translate</h2>
+            <textarea id="text-to-translate" placeholder="Excuse me, where is the restroom?"></textarea>
+            <h2>Language to translate</h2>
+            <select id="language-to-translate">
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="ja">Japanese</option>
+            </select>
+            <button id="translate-button">Translate</button>
+        </div>
         <script src="index.js" type="module"></script>
     </body>
 </html>
