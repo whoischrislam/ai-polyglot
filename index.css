@@ -1,0 +1,54 @@
+/* Universal */
+/* Header styles */
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.5em;
+}
+
+/* Body typography */
+h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Page styles */
+/* Banner container */
+#banner {
+    background: no-repeat url("assets/worldmap.png");
+    background-size: cover;
+}
+
+/* Logo container */
+#logo {
+    padding: 4em 2em;
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+/* Logo image */
+#logo img {
+    /* border: 1px solid red; */
+    height: 10vh;
+    margin-right: 1em;
+}
+
+/* Logo text container */
+#logo-text {
+    /* border: 1px solid red; */
+    width: fit-content;
+}
+
+/* App name text */
+#logo-text h1 {
+    margin: 0 0 0 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    color:#32CD32;
+}
+
+/* App description text */
+#logo-text p {
+    margin: 0;
+    font-size: 1.5em;
+    color: #FFFFFF;
+}
