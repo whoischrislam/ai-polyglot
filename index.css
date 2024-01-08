@@ -6,8 +6,20 @@ h1 {
 }
 
 /* Body typography */
-h2, p {
+h2, p, #text-to-translate, #language-to-translate {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Component styling */
+#text-to-translate, #language-to-translate {
+    font-size: 1.2em;
+    padding: 0.5em;
+}
+
+/* H2 styling */
+h2 {
+    color: #035A9D;
+    margin: 0 0 1vh 0;
 }
 
 /* Page styles */
@@ -22,19 +34,19 @@ h2, p {
     padding: 4em 2em;
     display: flex;
     justify-content: center;
-    /* border: 1px solid red; */
 }
 
 /* Logo image */
 #logo img {
-    /* border: 1px solid red; */
     height: 10vh;
     margin-right: 1em;
 }
 
 /* Logo text container */
 #logo-text {
-    /* border: 1px solid red; */
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
     width: fit-content;
 }
 
@@ -52,3 +64,54 @@ h2, p {
     font-size: 1.5em;
     color: #FFFFFF;
 }
+
+/* Content container */
+#body {
+    display:flex;
+    flex-direction: column;
+    padding: 4vh 4vw;
+    border: 1px solid red;
+}
+
+/* Text area styling */
+#text-to-translate {
+    margin:0 0 3vh 0;
+    border-radius: 6px;
+}
+
+/* Language dropdown stlying */
+#language-to-translate {
+    margin:0 0 3vh 0;
+    min-height: 48px;
+    min-width: 100%;
+    border-radius: 6px;
+}
+
+/* Translate button style */
+#translate-button {
+    background-color: #035A9D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    min-height: 48px;
+    min-width: 100%;
+    font-size: 1.3em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#translate-button:hover {
+    background-color: #004173;
+    transition: 0.3s;
+}
+
+#translate-button:focus {
+    background-color: #004173;
+    outline-color: #003258;
+    transition: 0.3s;
+}
+
+#translate-button:active {
+    background-color: #000a11;
+    transition: 0.3s;
+}
+
