@@ -1,12 +1,13 @@
+const apiKey = process.env.OPENAI_API_KEY;
+console.log("API Key:", apiKey);
+
 //OpenAI API
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: apiKey,
     dangerouslyAllowBrowser: true
 })
-
-console.log("OpenAI API Key: " + openai.apiKey);
 
 // Variable for select element
 let select = document.getElementById('language-to-translate');
