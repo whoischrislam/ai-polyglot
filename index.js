@@ -1,11 +1,10 @@
-const apiKey = process.env.OPENAI_API_KEY;
-console.log("API Key:", apiKey);
+const openaiApiKey = import.meta.env.VITE_API_KEY;
 
 //OpenAI API
 import OpenAI from 'openai';
 
 const openai = new OpenAI({
-    apiKey: apiKey,
+    apiKey: openaiApiKey,
     dangerouslyAllowBrowser: true
 })
 
