@@ -5,15 +5,15 @@ import OpenAI from 'openai';
 
 const openai = new OpenAI({
     apiKey: openaiApiKey,
-    dangerouslyAllowBrowser: true
+    dangerouslyAllowBrowser: true,
+    temperature: 0
 })
 
 // Variable for select element
 let select = document.getElementById('language-to-translate');
 
 // Variable for currently selected language
-let selectedLanguage = select.options[select.selectedIndex].textContent;
-console.log("initial language: " + selectedLanguage);
+let selectedLanguage = select.value;
 
 // Variable for h2 for translation
 let translatedTexth2;
@@ -40,7 +40,7 @@ let textTranslation;
 const messages = [
     {
         role: 'system',
-        content: 'You are a helpful language expert.'
+        content: 'You are a language expert that does only directly translate word for word.'
     },
     {
         role: 'user'
@@ -79,7 +79,7 @@ async function displayResponse() {
     // Create a new h2 to display the language the text was translated to
     translatedTexth2 = document.createElement('h2');
     // Set the text content of the h2 to display the language the text was translated to
-    translatedTexth2.textContent = `Translated text in ${select.options[select.selectedIndex].textContent}:`;
+    translatedTexth2.textContent = `Translated text in ${select.value}:`;
     // Create a new text area to display the translated text
     translatedText = document.createElement('textarea');
     translatedText.disabled = true;
@@ -91,11 +91,11 @@ async function displayResponse() {
 }
 
 // Add event listener to the select element to know which language to translate to
-select.addEventListener('change', () => {
+select.addEventListener('input', () => {
     // Print to console the language to translate to
-    console.log( "Currently selected language: " + select.options[select.selectedIndex].textContent);
+    console.log( "Currently selected language: " + select.value);
     // Set the selected language to the language to translate to
-    selectedLanguage = select.options[select.selectedIndex].textContent;
+    selectedLanguage = select.value;
 });
 
 // Add event listener to the button to translate the text
