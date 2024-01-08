@@ -1,4 +1,9 @@
 /* Universal */
+/* Setting height and width */
+html, body {
+    height: 100%;
+}
+
 /* Header styles */
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -6,12 +11,12 @@ h1 {
 }
 
 /* Body typography */
-h2, p, #text-to-translate, #language-to-translate {
+h2, p, textarea, #language-to-translate {
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Component styling */
-#text-to-translate, #language-to-translate {
+textarea, #language-to-translate {
     font-size: 1.2em;
     padding: 0.5em;
 }
@@ -67,13 +72,14 @@ h2 {
 
 /* Content container */
 #body {
+    border: 1px solid red;
     display:flex;
     flex-direction: column;
     padding: 4vh 4vw;
 }
 
 /* Text area styling */
-#text-to-translate {
+textarea {
     margin:0 0 3vh 0;
     border-radius: 6px;
 }
@@ -87,29 +93,30 @@ h2 {
 }
 
 /* Translate button style */
-#translate-button {
+button {
     background-color: #035A9D;
     color: #FFFFFF;
     border: none;
     border-radius: 6px;
     min-height: 48px;
-    min-width: 100%;
+    min-width: 80%;
     font-size: 1.3em;
     font-family: Arial, Helvetica, sans-serif;
+    margin: auto 0 0 0;
 }
 
-#translate-button:hover {
+button:hover {
     background-color: #004173;
     transition: 0.3s;
 }
 
-#translate-button:focus {
+button:focus {
     background-color: #004173;
     outline-color: #003258;
     transition: 0.3s;
 }
 
-#translate-button:active {
+button:active {
     background-color: #000a11;
     transition: 0.3s;
 }
